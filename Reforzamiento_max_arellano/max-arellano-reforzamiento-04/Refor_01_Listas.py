@@ -12,7 +12,7 @@ alum_list = []
 
 if cant_01 != 0:
     for i in range(cant_01):
-        alumno = input(f"Ingrese el alumno N° {i + 1} : ")
+        alumno = input(f"Ingrese el nombre del alumno N° {i + 1} : ")
         alum_list.append(alumno)
     print(f"El tamaño de la lista generada es : {cant_01}")
     t.sleep(0.5)
