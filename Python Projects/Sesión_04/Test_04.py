@@ -5,7 +5,6 @@ dix_3 = {"nombre" :"MYSQL", "tipo" : "BD relacional"}
 #convertir en lista
 
 lista_01 = list(dix_3)
-
 print(f"Mi diccionario convertido es el siguiente: {lista_01}")
 
 lista_02 = list(dix_3.values())
