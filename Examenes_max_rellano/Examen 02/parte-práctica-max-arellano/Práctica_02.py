@@ -12,21 +12,18 @@ con dos personas."""
 class Persona:
     def __init__(self, nombre, saldo):
         self.nombre = nombre
-        self._saldo = saldo
+        self.saldo = saldo
 
     def saldo(self, valor):
-        if valor >= 0:
-            self._saldo = valor
-        else:
-            print("El saldo no puede ser negativo")
+        self.saldo = valor
 
     def mostrar_saldo(self):
-        return f"Saldo actual de {self.nombre}: S/{self._saldo:.2f}"
+        return f"Saldo actual de {self.nombre}: S/ {self.saldo:.2f}"
 
     def transferencia(self, monto, otro_empleado):
-        if self._saldo >= monto:
-            self._saldo -= monto
-            otro_empleado.saldo += monto
+        if self.saldo >= monto:
+            self.saldo = self.saldo - monto
+            otro_empleado.saldo = otro_empleado.saldo + monto
             return f"Transferencia exitosa. {self.mostrar_saldo()}"
         else:
             return "Saldo insuficiente"
@@ -46,8 +43,7 @@ empleado2 = Empleado("Elisse", 25, 2210, 3031)
 
 print(empleado1.mostrar_saldo())
 print(empleado2.mostrar_saldo())
-print(empleado1.transferencia(1500, empleado2))
+print(empleado1.transferencia(1120, empleado2))
 print(empleado1.mostrar_saldo())
 print(empleado2.mostrar_saldo())
-
-print(empleado2.transferencia(5000, empleado1))
+print(empleado2.transferencia(2000, empleado1))
