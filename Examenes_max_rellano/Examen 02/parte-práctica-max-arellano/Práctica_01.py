@@ -10,7 +10,6 @@ pantalla dicho sueldo ya incrementado).
 “En el año 2025 tendrá XX años”, el año se ingresará por parámetro y la edad es la
 edad que ya se ingresó (Mostrar por pantalla este valor)"""
 
-
 class Empleado:
     def __init__(self, nombre, edad, sueldo):
         self.nombre = ""
@@ -29,7 +28,7 @@ class Empleado:
         print(f"¡Ha pasado un año {self.nombre} ahora tienes {self.edad} años.")
 
     def aumento_sueldo(self, porcentaje):
-        aumento = self.sueldo * porcentaje / 100
+        aumento = self.sueldo*porcentaje/100
         self.sueldo = self.sueldo + aumento
         print(f"Señor {self.nombre} su sueldo es {self.sueldo:.2f} soles. Recibió un {porcentaje}% de aumento.")
 
@@ -38,8 +37,8 @@ class Empleado:
         print(f"En el año {año_futuro} el señor {self.nombre} tendrá {pred} años.")
 
 
-emp1 = Empleado("", 0, 2000)
-emp2 = Empleado("", 0, 2500)
+emp1 = Empleado("",0,2000)
+emp2 = Empleado("",0, 2500)
 
 for emp in [emp1, emp2]:
     emp.pedir_nombre()
